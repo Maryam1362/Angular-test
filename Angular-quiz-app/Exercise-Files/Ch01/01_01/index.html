@@ -14,7 +14,7 @@
            <div class="{{($index === activeQuestion)? 'on' :'off'}}
 
             {{(myQuestion.questionState === 'answered') ? 'answered' : 'unanswered'}}
-            {{(myQuestion.correctness === 'correct') ? 'correct' : 'incorrect'}}
+            {{(myQuestion.correctness === 'correct') ? 'correct' : 'incorrect '}}
            " 
            ng-repeat="myQuestion in myQuestions"></div>
 
@@ -52,9 +52,9 @@
 
 		      </div>
          </div>
-         <div class="results">
+         <div class="results {{ (totalQuestions === activeQuestion) ? 'active' : 'inactive'}}">
          	<h3>Results</h3>
-         	<p> You scored x% by correctly answreing x of the total of X questions.</p>
+         	<p> You scored {{percentage}}% by correctly answreing {{score}} of the total of {{totalQuestions}} questions.</p>
          	<p> Use the links below to challenge your friends.</p>
          	<div class="share">
              <a class="btn email" href="#">Email</a>
