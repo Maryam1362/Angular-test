@@ -50,14 +50,17 @@ $scope.selectContinue = function(){
   return $scope.activeQuestion += 1;
 }
 
-$scope.createShareLinks = function (percentage){
-  var url = 'http://codifydesign.com';
-  var emailLink='<a class="btn email" href="mailto:?subject=Try to beat my quiz score!&body=I scored a '+percentage+'% on this quiz about Saturn, Try to beat my score at '+url+'">Email a friend</a>';
-  var twitterLink ='<a class="btn twitter" target="_blank" href="http://twitter.com/share?text=I scored a '+ percentage +'% on this quiz about Saturn. Try to beat my score at&url='+url+'&hashtags=SaturnQuiz">Tweet your score</a>';
-  var newMarkup = emailLink + twitterLink;
-  return $sce.trustAsHtml(newMarkup);
+    $scope.createShareLinks = function(percentage) {
+      var url = 'http://www.felipedearaujo.com/saturn-quiz';
 
-}
+      var emailLink = '<a class="btn email" href="mailto:?subject=Try to beat my saturn quiz score!&body=check my score">Email a friend</a>';
+
+      var twitterlLink = '<a class="btn twitter" target="_blank" href="http://twitter.com/share?text=I scored a '+ percentage +'% on this quiz about Saturn. Try to beat my score at&url='+url+'&hashtags=SaturnQuiz">Tweet your score</a>';
+
+      var newMarkup = emailLink + twitterlLink;
+
+      return $sce.trustAsHtml(newMarkup);
+    }
 
 	}]);
 
